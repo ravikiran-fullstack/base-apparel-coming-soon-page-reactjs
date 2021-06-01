@@ -1,13 +1,102 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+--desaturated-red: hsl(0, 36%, 70%);
+--soft-red: hsl(0, 93%, 68%);
+--dark-grayish-red: hsl(0, 6%, 24%)
+}
+
+html{
+  font-size: 100%;
+}
+
+body{
+  min-height: 100vh;
+  width: 100vw;
+  font-family: 'Josefin Sans', sans-serif;
+  
+  /* background: -28vw -21vh/100% no-repeat url(./assets/bg-pattern-desktop.svg); */
+}
+
+.container-fluid{
+  height: 100vh;
+  background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+.pageImage{
+  background-image: url("./assets/hero-desktop.jpg");
+  min-height: 100vh;
+}
+
+.textRed{
+  color: var(--desaturated-red);
+}
+
+.emailButton{
+  border: 1px solid var(--desaturated-red);
+  border-radius: 20px;
+  width: 225.5px;
+  margin: auto;
+}
+
+.emailButton > input {
+  border: none;
+  width: 80%;
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 20px;
+}
+
+.emailButton > input:focus{
+  outline: none;
+}
+
+.buttonStyle {
+  border: none;
+  height: 32px;
+  width: 20%;
+  border-radius: 20px;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.buttonStyle:focus{
+  outline: none;
+}
+
+.pageHeading{
+  display: none;
+}
+
+
+@media(max-width:1080px){
+  .pageHeading{
+    display: block !important;
+    min-height: 10vh !important;
+  }
+
+  .pageHeadingLogo{
+    /* background: 0vw 0vh/100% no-repeat url(./assets/logo.svg); */
+    background-size: 300px 100px;
+    padding: 20px;
+  }
+
+  .pageImage{
+    min-height: 30vh !important;
+    background: 0vw 0vh/100% no-repeat url(./assets/hero-mobile.jpg);
+  } 
+
+  .pageInfo{
+    min-height: 60vh !important;
+    text-align: center;
+  }
 }
